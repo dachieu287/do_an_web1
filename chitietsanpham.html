@@ -1,0 +1,141 @@
+<htlm>
+    <head>
+        <title>HiDuBi</title>
+        <link href="css/makecolor.css" rel="stylesheet" />
+        <script language="javascript" src="js/javascript.js"></script>
+    </head>
+    <body onLoad="bb(), signin(), hienThiVaoGio()">
+        <div id="outer">
+            <div id="header">
+                <div id="banner">
+                    <div id="logo">
+                    <a title="hidubi.com" href="index.html" class="logo"><b>HiDuBi</b></a>
+                    </div>
+                    <div class="timkiem">
+                        <div class="container-1">
+                                <input type="search" name="search" id="search" onchange="timkiem()"placeholder="Tìm kiếm..."/>
+                        </div>   
+                    </div>
+                    <div class="taikhoan" id="taikhoan">
+                    </div>
+                </div>
+                <div class="menu">
+                    <ul class="menu">
+                        <li class="dropdown">
+                            <a href="" class="drop">ĐIỆN THOẠI</a>
+                            <ul class="dropdown-content">
+                                <li class=""><a href="index.html?dtsamsung">Samsung</a></li>
+                                <li class=""><a href="index.html?dtoppo">Oppo</a></li>
+                                <li class=""><a href="index.html?dtapple">Apple</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#phone" class="drop">LAPTOP</a>
+                            <ul class="dropdown-content">
+                                <li class=""><a href="index.html?ltapple">Apple</a></li>
+                                <li class=""><a href="index.html?ltdell">Dell</a></li>
+                                <li class=""><a href="index.html?lthp">HP</a></li>
+                                <li class=""><a href="index.html?ltasus">Asus</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#phone" class="drop">TABLET</a>
+                            <ul class="dropdown-content">
+                                <li class=""><a href="index.html?tlapple">Apple</a></li>
+                                <li class=""><a href="index.html?tlsamsung">Samsung</a></li>
+                                <li class=""><a href="index.html?tlhuawei">Huawei</a></li>
+                                <li class=""><a href="index.html?tllenovo">Lenovo</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#phone" class="drop">PHỤ KIỆN</a>
+                            <ul class="dropdown-content">
+                                <li class=""><a href="index.html?pkps">Pin sạc</a></li>
+                                <li class=""><a href="index.html?pkcs">Cáp sạc</a></li>
+                                <li class=""><a href="index.html?pktn">Thẻ Nhớ</a></li>
+                                <li class=""><a href="index.html?pkusb">USB</a></li>
+                                <li class=""><a href="index.html?pkhp">Tai nghe</a></li>
+                                <li class=""><a href="index.html?pkc">Chuột</a></li>
+                            </ul>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </div>
+            <div class="body" style="margin-top: 70px">
+                <div style="width: 100%" id="noidung"></div>
+            </div>
+            <div class="foot">© 2018. Bản quyền của Công Ty ABCXYZ </div>
+  
+        </div>
+
+        
+        <div id="id01" class="login">
+  <form class="login-content animate">
+    <div class="imgcontainer">
+      <span onClick="document.getElementById('id01').style.display='none'" class="close" title="Close Login">&times;</span>
+    </div>
+    <div class="container">
+      <label><b>Tên đăng nhập</b></label>
+      <input type="text" id="user2" placeholder="Nhập tên đăng nhập"  required>
+
+      <label><b>Mật khẩu</b></label>
+      <input type="password" id="pass2" placeholder="Nhập mật khẩu"  required>
+      <button type="submit" onClick="checkLogin()">Đăng nhập</button>
+    </div>
+  </form>
+</div>
+           
+<div id="id02" class="signup">
+  <form class="signup-content animate">
+    <div class="imgcontainer">
+      <h1>Đăng ký tài khoản</h1>
+      <span onClick="document.getElementById('id02').style.display='none'" class="close" title="Close Signup">&times;</span>
+   </div>
+   <div class="container">
+      
+      <label><b>Họ và tên</b></label>
+      <input type="text" id="name" placeholder="Nhập tên" required>
+      
+      <label><b>Tên đăng nhập</b></label>
+      <input type="text" id="user1" placeholder="Nhập tên đăng nhập" required>
+
+      <label><b>Mật khẩu</b></label>
+      <input type="password" id="pass1" placeholder="Nhập mật khẩu" required>
+
+      <label><b>Nhập lại mật khẩu</b></label>
+      <input type="password" id="repass" placeholder="Nhập lại mật khẩu" required>
+      
+      <label><b>Địa chỉ</b></label>
+      <input type="text" placeholder="Nhập địa chỉ" name="address" required>
+      
+      <label><b>Số điện thoại</b></label>
+      <input type="text" placeholder="Số điện thoại" name="phone" required>
+      <div class="clearfix">
+        <button type="submit" class="signupbtn" onClick="checkSignUp()">Đăng ký</button>
+      </div>
+   </div>
+  </form>
+ </div> 
+ 
+  <div id="id03" class="login">
+    <div class="container-cart animate">
+  <div class="shopping-cart">
+    <div class="shopping-cart-header">
+      <span style="font-size: 20px;" class="" onClick="document.getElementById('id03').style.display='none'">&times;</span>
+      <div class="shopping-cart-total">
+        <span class="lighter-text">Tổng:</span>
+        <span id="total" class="main-color-text"></span>
+      </div>
+    </div>
+    <div id="cart">
+    </div>
+    <hr />
+    <button class="button-cart1" onclick="xoaGioHang()">Xóa giỏ hàng</button><button class="button-cart2" onclick="thanhToan()">Thanh Toán</button>
+  </div>
+</div>
+</div>  
+
+ 
+    </body>
+</htlm>
